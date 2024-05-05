@@ -18,22 +18,22 @@
             </div>
         </div>
     </section>
-    <section data-bs-version="5.1" class="image05 cid-ubp1pqYLVI" id="image-7-ubp1pqYLVI">
-        <div class="container">
-            <div class="row ">
-                <div class="col-12 col-lg-8">
-                    <div class="image-wrapper mb-4">
-                        <img class="w-100" src="{{ asset('/images/main/photo-1585095595274-aeffce35511a.webp') }}"
-                             alt="Zmeika.pro">
-                    </div>
-                </div>
-                <div class="col-12 col-lg">
-                    <p class="mbr-side-description mbr-fonts-style mb-4 align-center display-7">Познакомьтесь с нашими
-                        удивительными змеями и выберите своего нового питомца прямо сейчас!</p>
-                </div>
-            </div>
-        </div>
-    </section>
+{{--    <section data-bs-version="5.1" class="image05 cid-ubp1pqYLVI" id="image-7-ubp1pqYLVI">--}}
+{{--        <div class="container">--}}
+{{--            <div class="row ">--}}
+{{--                <div class="col-12 col-lg-8">--}}
+{{--                    <div class="image-wrapper mb-4">--}}
+{{--                        <img class="w-100" src="{{ asset('/images/main/photo-1585095595274-aeffce35511a.webp') }}"--}}
+{{--                             alt="Zmeika.pro">--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--                <div class="col-12 col-lg">--}}
+{{--                    <p class="mbr-side-description mbr-fonts-style mb-4 align-center display-7">Познакомьтесь с нашими--}}
+{{--                        удивительными змеями и выберите своего нового питомца прямо сейчас!</p>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </section>--}}
     @include('sections.products-list')
     @include('sections.latest-news')
     <section data-bs-version="5.1" class="list1 cid-ubp1pqZyJ6" id="faq-1-ubp1pqZyJ6">
