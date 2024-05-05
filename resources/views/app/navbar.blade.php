@@ -34,7 +34,7 @@
                 </ul>
 
                 <div class="navbar-buttons mbr-section-btn">
-                    <a class="btn btn-primary display-4" href="/">Покупайте змей</a>
+                    <a class="btn btn-primary display-4" href="/message">Покупайте змей</a>
                 </div>
             </div>
         </div>

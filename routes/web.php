@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ShowController;
 use Illuminate\Support\Facades\Route;
@@ -26,3 +27,6 @@ Route::get('/news/{slug}', [NewsController::class, 'detail'])->name('news.detail
 // catalog
 Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
 Route::get('/catalog/{slug}', [CatalogController::class, 'detail'])->name('catalog.detail');
+
+Route::get('/message', [MessageController::class, 'page']);
+Route::post('/message', [MessageController::class, 'message']);
