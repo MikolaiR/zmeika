@@ -23,8 +23,7 @@
                                     </p>
                                     <div class="mbr-section-btn mt-3">
                                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                data-bs-target="#exampleModal"
-                                                data-bs-whatever="{{ $product->name.' '. $product->price }}">
+                                                data-bs-target="#exampleModal">
                                             Купить сейчас
                                         </button>
                                         <div class="modal fade" id="exampleModal" tabindex="-1"

@@ -37,8 +37,9 @@
                                 <textarea name="textarea" placeholder="Сообщение" data-form-field="textarea"
                                           class="form-control" id="textarea-form03-5"></textarea>
                             </div>
-                            <input hidden type="text" name="recipient" class="form-control"
-                                   id="recipient-name">
+                            @if(isset($product))
+                                <input hidden type="text" name="product" class="form-control" value="{{ $product->name.' '. $product->price }}">
+                            @endif
                             <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
                                 <button type="submit" class="btn btn-primary display-7">
                                     Отправить сообщение

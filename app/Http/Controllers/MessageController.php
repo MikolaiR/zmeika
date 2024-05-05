@@ -25,7 +25,7 @@ class MessageController extends Controller
         if (isset($request->email)) $text .= ' email: ' . $request->email;
         if (isset($request->phone)) $text .= ' phone: ' . $request->message;
         if (isset($request->textarea)) $text .= ' message: ' . $request->textarea;
-        if (isset($request->recipient)) $text .= ' recipient: ' . $request->recipient;
+        if (isset($request->product)) $text .= ' product: ' . $request->product;
 
         TelegramService::sendMessage($text);
 
