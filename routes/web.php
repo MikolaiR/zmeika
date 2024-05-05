@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\CatalogController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\ShowController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// home
+Route::get('/', [ShowController::class, 'show'])->name('main.show');
+
+// news
+Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+Route::get('/news/{slug}', [NewsController::class, 'detail'])->name('news.detail');
+
+// catalog
+Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
+Route::get('/catalog/{slug}', [CatalogController::class, 'detail'])->name('catalog.detail');
