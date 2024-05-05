@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
                     <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="{{ route('catalog.index')}}">Каталог змеи</a>
+                        <a class="nav-link link text-black display-4" href="{{ route('catalog.index')}}">Каталог змей</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link text-black display-4" href="{{ route('news.index')}}" aria-expanded="false">Новости</a>
