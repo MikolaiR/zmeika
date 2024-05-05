@@ -8,7 +8,7 @@ class TelegramService
 {
     public static function sendMessage($text){
         $botToken = '6850300675:AAG05iqLFOneHRuapJfTd8RrInBR7vGoWEw';
-        $chatId = '-4288575174';
+        $chatId = '-1002075831037';
 
         $response = Http::post("https://api.telegram.org/bot{$botToken}/sendMessage", [
             'chat_id' => $chatId,
