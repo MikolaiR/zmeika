@@ -14,7 +14,7 @@ class MessageController extends Controller
         $title = 'ZMEIKA PRO | Обратная связь';
         $keywords = 'ZMEIKA PRO | обратная связь';
         $description = 'ZMEIKA PRO | Обратная связь';
-        return view('sections.message-form', ['title' => $title, 'keywords' => $keywords, 'description' => $description]);
+        return view('pages.message', ['title' => $title, 'keywords' => $keywords, 'description' => $description]);
     }
 
     public function message(Request $request): \Illuminate\Http\RedirectResponse
@@ -23,8 +23,9 @@ class MessageController extends Controller
 
         if (isset($request->name)) $text .= ' name: ' . $request->name;
         if (isset($request->email)) $text .= ' email: ' . $request->email;
-//        if (isset($request->phone)) $text .= ' phone: ' . $request->message;
+        if (isset($request->phone)) $text .= ' phone: ' . $request->message;
         if (isset($request->textarea)) $text .= ' message: ' . $request->textarea;
+        if (isset($request->recipient)) $text .= ' recipient: ' . $request->recipient;
 
         TelegramService::sendMessage($text);
 
