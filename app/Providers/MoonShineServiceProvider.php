@@ -8,7 +8,6 @@ use App\MoonShine\Resources\CategoriesResource;
 use App\MoonShine\Resources\NewSletterResource;
 use App\MoonShine\Resources\ProductsResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
-use MoonShine\MoonShine;
 use MoonShine\Menu\MenuGroup;
 use MoonShine\Menu\MenuItem;
 use MoonShine\Resources\MoonShineUserResource;
@@ -43,23 +42,20 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
     {
         return [
             MenuGroup::make(static fn() => __('moonshine::ui.resource.system'), [
-               MenuItem::make(
-                   static fn() => __('moonshine::ui.resource.admins_title'),
-                   new MoonShineUserResource()
-               ),
-                MenuGroup::make('Основное', [
-                    MenuItem::make('Продукция', new ProductsResource()),
-                    MenuItem::make('Категории', new CategoriesResource()),
-                    MenuItem::make('Новости', new NewSletterResource()),
-                ]),
-               MenuItem::make(
-                   static fn() => __('moonshine::ui.resource.role_title'),
-                   new MoonShineUserRoleResource()
-               ),
+                MenuItem::make(
+                    static fn() => __('moonshine::ui.resource.admins_title'),
+                    new MoonShineUserResource()
+                ),
+                MenuItem::make('Продукция', new ProductsResource()),
+                MenuItem::make('Категории', new CategoriesResource()),
+                MenuItem::make('Новости', new NewSletterResource()),
             ]),
-
+            MenuItem::make(
+                static fn() => __('moonshine::ui.resource.role_title'),
+                new MoonShineUserRoleResource()
+            ),
             MenuItem::make('Documentation', 'https://moonshine-laravel.com')
-               ->badge(fn() => 'Check'),
+                ->badge(fn() => 'Check'),
         ];
     }
 
