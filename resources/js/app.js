@@ -1,1 +1,11 @@
 import './bootstrap';
+import './_bootstrap.bundle.min.js';
+import './_jarallax.js';
+import './_smooth-scroll.js';
+import './_ytplayer-index.js';
+import './_navbar-dropdown.js';
+import './_scroll-gallery.js';
+import './_masonry.pkgd.min.js';
+import './_imagesloaded.pkgd.min.js';
+import './_theme-script.js';
+import './_formoid.min.js';
