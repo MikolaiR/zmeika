@@ -12,14 +12,7 @@
                     <form action="/message" method="POST" class="mbr-form form-with-styler"
                           data-form-title="Form Name">
                         @csrf
-                        <div class="row">
-                            <div hidden="hidden" data-form-alert="" class="alert alert-success col-12">Спасибо, что
-                                заполнили форму!
-                            </div>
-                            <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">
-                                Упс...! Какая-то проблема!
-                            </div>
-                        </div>
+                        @include('elements.result-sending')
                         <div class="dragArea row">
                             <div class="col-md col-sm-12 form-group mb-3 mb-3" data-for="name">
                                 <input type="text" name="name" placeholder="Имя" data-form-field="name"
@@ -38,7 +31,8 @@
                                           class="form-control" id="textarea-form03-5"></textarea>
                             </div>
                             @if(isset($product))
-                                <input hidden type="text" name="product" class="form-control" value="{{ $product->name.' '. $product->price }}">
+                                <input hidden type="text" name="product" class="form-control"
+                                       value="{{ $product->name.' '. $product->price }}">
                             @endif
                             <div class="col-lg-12 col-md-12 col-sm-12 align-center mbr-section-btn">
                                 <button type="submit" class="btn btn-primary display-7">

@@ -17,7 +17,7 @@ class MessageController extends Controller
         return view('pages.message', ['title' => $title, 'keywords' => $keywords, 'description' => $description]);
     }
 
-    public function message(Request $request): \Illuminate\Http\RedirectResponse
+    public function message(Request $request)
     {
         $text = '';
 
@@ -27,8 +27,15 @@ class MessageController extends Controller
         if (isset($request->textarea)) $text .= ' message: ' . $request->textarea;
         if (isset($request->product)) $text .= ' product: ' . $request->product;
 
-        TelegramService::sendMessage($text);
-
-        return redirect()->back();
+        if (TelegramService::sendMessage($text)) {
+            // success
+            return redirect()->back()->with('success_message', 'Сообщение отправлено, скоро Вам ответят.');
+        } else {
+            // error
+            return redirect()
+                ->back()
+                ->with('error_message',
+                    'Произошла ошибка, просим связаться через <a href="https://www.facebook.com/profile.php?id=61552662807474">Facebook</a>.');
+        }
     }
 }

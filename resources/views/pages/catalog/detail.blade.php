@@ -26,6 +26,8 @@
                                                 data-bs-target="#exampleModal">
                                             Купить сейчас
                                         </button>
+                                        @include('elements.result-sending')
+                                        {{--dialog--}}
                                         <div class="modal fade" id="exampleModal" tabindex="-1"
                                              aria-labelledby="exampleModalLabel" aria-hidden="true">
                                             <div class="modal-dialog " style="margin-left: 5vw;margin-right: 5vw" >
@@ -44,7 +46,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        {{--                                        <a class="btn btn-lg btn-primary display-7" href="/">Купить сейчас</a>--}}
                                     </div>
                                 </div>
                             </div>
