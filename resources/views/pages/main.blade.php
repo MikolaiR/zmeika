@@ -246,17 +246,11 @@
                         <strong>Подписывайтесь на нас</strong>
                     </h3>
                     <div class="social-list align-center">
-                        <a class="iconfont-wrapper bg-facebook m-2 " target="_blank" href="https://mobiri.se">
+                        <a class="iconfont-wrapper bg-facebook m-2 " target="_blank" href="https://www.facebook.com/profile.php?id=61552662807474&locale=ru_RU">
                             <span class="socicon-facebook socicon"></span>
                         </a>
-                        <a class="iconfont-wrapper bg-twitter m-2" href="https://mobiri.se" target="_blank">
-                            <span class="socicon-twitter socicon"></span>
-                        </a>
-                        <a class="iconfont-wrapper bg-instagram m-2" href="https://mobiri.se" target="_blank">
+                        <a class="iconfont-wrapper bg-instagram m-2" href="https://www.instagram.com/vladimirsnake23/" target="_blank">
                             <span class="socicon-instagram socicon"></span>
-                        </a>
-                        <a class="iconfont-wrapper bg-tiktok m-2" href="https://mobiri.se" target="_blank">
-                            <span class="socicon-tiktok socicon"></span>
                         </a>
                     </div>
                 </div>
