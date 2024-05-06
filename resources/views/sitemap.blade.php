@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://zmeika.by/</loc>
+        <loc>https://zmeika.pro/</loc>
         <lastmod>2024-05-06T12:00:14+01:00</lastmod>
         <priority>1.0</priority>
     </url>
