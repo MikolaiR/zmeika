@@ -14,7 +14,8 @@ class MessageController extends Controller
         $title = 'ZMEIKA PRO | Обратная связь';
         $keywords = 'ZMEIKA PRO | обратная связь';
         $description = 'ZMEIKA PRO | Обратная связь';
-        return view('pages.message', ['title' => $title, 'keywords' => $keywords, 'description' => $description]);
+        $canonicalLink = 'message/';
+        return view('pages.message', ['title' => $title, 'keywords' => $keywords, 'description' => $description, 'canonicalLink' => $canonicalLink]);
     }
 
     public function message(Request $request)

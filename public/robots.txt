@@ -1,2 +1,6 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /storage/
+
+Host: https://zmeika.by
+Sitemap: https://zmeika.by/sitemap.xml

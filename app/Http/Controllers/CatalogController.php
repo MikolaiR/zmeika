@@ -24,8 +24,11 @@ class CatalogController extends Controller
         $keywords = "змеи на продажу, купить змею, экзотические змеи, ручные змеи, уход за змеями, змеи как питомцы, террариумы для змей";
         // Retrieve the products in the specific category
         $products = Product::categoryProducts()->get();
-        // Return the view with products, title, description, and keywords
-        return view('pages.catalog.index', ['products' => $products, 'title' => $title, 'description' => $description, 'keywords' => $keywords]);
+        $canonicalLink = 'catalog/';
+        // Return
+        return view('pages.catalog.index', [
+            'products' => $products, 'title' => $title,
+            'canonicalLink' => $canonicalLink, 'description' => $description, 'keywords' => $keywords]);
     }
 
     /**
@@ -46,7 +49,10 @@ class CatalogController extends Controller
         $keywords = $product->name.", купить $product->name, уход за $product->name, содержание $product->name, экзотические змеи";
         // Create JSON-LD schema for SEO
         $ldJsonSchema = SeoService::createLdJson();
+        $canonicalLink = 'catalog/'.$product->slug;
         // Return the view with product details and SEO information
-        return view('pages.catalog.detail', ['product' => $product, 'title' => $title, 'description' => $description , 'keywords' => $keywords]);
+        return view('pages.catalog.detail', [
+            'product' => $product, 'title' => $title,
+            'canonicalLink' => $canonicalLink, 'description' => $description , 'keywords' => $keywords]);
     }
 }

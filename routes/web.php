@@ -4,6 +4,7 @@ use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ShowController;
+use App\Http\Controllers\SiteMapController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,3 +31,5 @@ Route::get('/catalog/{slug}', [CatalogController::class, 'detail'])->name('catal
 
 Route::get('/message', [MessageController::class, 'page']);
 Route::post('/message', [MessageController::class, 'message']);
+
+Route::get('/sitemap.xml', [SiteMapController::class, 'generateSitemap'])->name('sitemap');
