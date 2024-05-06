@@ -2,5 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /storage/
 
-Host: https://zmeika.by
-Sitemap: https://zmeika.by/sitemap.xml
+Host: https://zmeika.pro
+Sitemap: https://zmeika.pro/sitemap.xml

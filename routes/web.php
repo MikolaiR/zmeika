@@ -33,3 +33,6 @@ Route::get('/message', [MessageController::class, 'page']);
 Route::post('/message', [MessageController::class, 'message']);
 
 Route::get('/sitemap.xml', [SiteMapController::class, 'generateSitemap'])->name('sitemap');
+Route::get('/robots.txt', function () {
+    return response()->file(public_path('robots.txt'));
+});
