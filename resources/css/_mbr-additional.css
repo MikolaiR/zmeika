@@ -992,7 +992,7 @@ a {
     padding: 0.5rem 1.8rem;
 }
 .cid-ubp1pqWtlZ .navbar .navbar-logo img {
-    min-width: 6rem;
+    min-width: 15rem;
     object-fit: cover;
 }
 .cid-ubp1pqWtlZ .navbar .navbar-collapse {
@@ -1046,7 +1046,7 @@ a {
         min-height: 72px;
     }
     .cid-ubp1pqWtlZ .navbar .navbar-logo img {
-        height: 2.5rem !important;
+        height: 9rem !important;
         min-width: 2.5rem !important;
     }
 }

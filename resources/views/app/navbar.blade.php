@@ -4,11 +4,11 @@
             <div class="navbar-brand">
 				<span class="navbar-logo">
 					<a href="/">
-						<img src="{{ asset('images/logo.webp') }}" alt="Mobirise Website Builder"
-                             style="height: 4.3rem;">
+						<img src="{{ asset('images/logo.svg') }}" alt="ZMEIKA"
+                             style="height: 15rem">
 					</a>
 				</span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="/">ZMEIKA</a></span>
+{{--                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="/">ZMEIKA</a></span>--}}
             </div>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
                     data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"

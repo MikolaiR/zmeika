@@ -10,7 +10,7 @@
     <meta http-equiv="Content-Security-Policy"
           content="font-src 'self' data:; child-src blob: https://mc.yandex.ru; frame-src blob: https://mc.yandex.ru https://www.youtube.com; default-src 'self'; script-src-elem 'unsafe-inline' https://mc.yandex.ru https://zmeika.pro https://www.googletagmanager.com script-src 'self' 'unsafe-eval' 'nonce-{{ $nonce }}'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://mc.yandex.ru/ https://www.google-analytics.com/">
     <meta name="yandex-verification" content=""/>
-    <link rel="icon" type="image/webp" sizes="any" href="{{ asset('images/logo.webp') }}">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="{{ asset('images/logo.svg') }}">
     <meta name="author" content="https://tutweb.by"/>
     <meta name="copyright" content="tutweb(c)">
     <title>{{ isset($title) ? $title : 'Купить змею в Минске' }}</title>
@@ -29,6 +29,7 @@
     <meta property="og:description" content="{{ isset($description) ? $description : 'Купить змею в Минске' }}">
     <meta property="og:image" content="{{ asset('images/logo.webp') }}">
     <meta property="og:image:alt" content="{{ isset($title) ? $title : 'Купить змею в Минске' }}">
+    <meta property="og:image" content="{{ asset('images/logo.png') }}">
     <meta property="og:image:width" content="640">
     <meta property="og:image:height" content="480">
     <meta property="og:type" content="image/webp">
