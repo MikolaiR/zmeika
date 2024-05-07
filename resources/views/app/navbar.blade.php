@@ -4,8 +4,7 @@
             <div class="navbar-brand">
 				<span class="navbar-logo">
 					<a href="/">
-						<img src="{{ asset('images/logo.svg') }}" alt="ZMEIKA"
-                             style="height: 15rem">
+						<img src="{{ asset('images/logo.svg') }}" alt="ZMEIKA">
 					</a>
 				</span>
 {{--                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="/">ZMEIKA</a></span>--}}
