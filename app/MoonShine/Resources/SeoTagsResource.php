@@ -24,6 +24,8 @@ class SeoTagsResource extends ModelResource
 
     protected string $title = 'SeoTags';
 
+    protected string $column = 'url';
+
     /**
      * @return list<MoonShineComponent|Field>
      */
@@ -32,10 +34,11 @@ class SeoTagsResource extends ModelResource
         return [
             Block::make([
                 ID::make()
+                    ->hideOnIndex()
                     ->showOnExport()
-                    ->useOnImport()
-                    ->sortable(),
+                    ->useOnImport(),
                 Text::make('Url')
+                    ->sortable()
                     ->required()
                     ->showOnExport()
                     ->useOnImport(),

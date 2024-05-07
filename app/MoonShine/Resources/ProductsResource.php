@@ -40,7 +40,8 @@ class ProductsResource extends ModelResource
             Block::make([
                 Grid::make([
                     Column::make([
-                        ID::make()->sortable(),
+                        ID::make()
+                            ->hideOnIndex(),
                         Text::make('name')
                             ->reactive()
                             ->sortable(),

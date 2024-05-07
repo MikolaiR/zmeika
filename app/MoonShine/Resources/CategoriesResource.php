@@ -32,8 +32,10 @@ class CategoriesResource extends ModelResource
     {
         return [
             Block::make([
-                ID::make()->sortable(),
+                ID::make()->sortable()
+                    ->hideOnIndex(),
                 Text::make('name')
+                    ->sortable(),
             ]),
         ];
     }

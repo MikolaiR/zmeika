@@ -34,7 +34,8 @@ class NewSletterResource extends ModelResource
     {
         return [
             Block::make([
-                ID::make()->sortable(),
+                ID::make()
+                    ->hideOnIndex(),
                 Text::make('title')
                     ->reactive()
                     ->sortable(),
