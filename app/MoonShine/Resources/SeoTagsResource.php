@@ -35,28 +35,23 @@ class SeoTagsResource extends ModelResource
                     ->showOnExport()
                     ->useOnImport()
                     ->sortable(),
-
                 Text::make('Url')
                     ->required()
                     ->showOnExport()
                     ->useOnImport(),
-
                 Text::make('Title')
                     ->required()
                     ->showOnExport()
                     ->useOnImport(),
-
                 Text::make('Description')
                     ->showOnExport()
                     ->useOnImport(),
-
                 Text::make('Keywords')
                     ->showOnExport()
                     ->useOnImport(),
-
-                TinyMce::make('Text')
-                    ->showOnExport()
-                    ->useOnImport()
+//                TinyMce::make('Text')
+//                    ->showOnExport()
+//                    ->useOnImport()
             ]),
         ];
     }
