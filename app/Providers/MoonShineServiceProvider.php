@@ -7,6 +7,7 @@ namespace App\Providers;
 use App\MoonShine\Resources\CategoriesResource;
 use App\MoonShine\Resources\NewSletterResource;
 use App\MoonShine\Resources\ProductsResource;
+use App\MoonShine\Resources\SeoTagsResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
 use MoonShine\Menu\MenuGroup;
 use MoonShine\Menu\MenuItem;
@@ -47,6 +48,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
             ]),
             MenuGroup::make('СЕО',[
                 MenuItem::make('Новости', new NewSletterResource()),
+                MenuItem::make('СЕО параметры', new SeoTagsResource()),
             ]),
             MenuGroup::make(static fn() => __('moonshine::ui.resource.system'), [
                 MenuItem::make(
@@ -60,7 +62,6 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
                 MenuItem::make('Documentation', 'https://moonshine-laravel.com')
                     ->badge(fn() => 'Check'),
             ]),
-
         ];
     }
 

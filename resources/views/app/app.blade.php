@@ -13,12 +13,10 @@
     <link rel="icon" type="image/svg+xml" sizes="any" href="{{ asset('images/logo.svg') }}">
     <meta name="author" content="https://tutweb.by"/>
     <meta name="copyright" content="tutweb(c)">
-    <title>{{ isset($title) ? $title : 'Купить змею в Минске' }}</title>
-    <meta name="description" content="{{ isset($description) ? $description : 'Купить змею в Минске' }}">
-    <meta name="keywords" content="{{ isset($keywords) ? $keywords : 'Купить змею в Минске' }}">
+    @seo
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="{{ isset($title) ? $title : 'Купить змею в Минске' }}">
-    <meta property="og:url" content="https://zmeika.pro/{{ isset($canonicalLink) ? $canonicalLink : ''}}">
+    <meta property="og:title" content="{{ seo()->meta()->title() }}">
+    <meta property="og:url" content="https://zmeika.pro{{ seo()->url() }}">
     {{--    <meta property="og:video" content="https://www.youtube.com/embed/K2evWi18h0U">--}}
     {{--    <meta property="video:duration" content="130">--}}
     {{--    <meta property="og:video:width" content="640">--}}
@@ -26,14 +24,13 @@
     {{--    <meta property="ya:ovs:upload_date" content="2024-03-28">--}}
     {{--    <meta property="ya:ovs:adult" content="false">--}}
     {{--    <meta property="og:video:type" content="flash">--}}
-    <meta property="og:description" content="{{ isset($description) ? $description : 'Купить змею в Минске' }}">
-    <meta property="og:image" content="{{ asset('images/logo.webp') }}">
-    <meta property="og:image:alt" content="{{ isset($title) ? $title : 'Купить змею в Минске' }}">
+    <meta property="og:description" content="{{ seo()->meta()->description() }}">
     <meta property="og:image" content="{{ asset('images/logo.png') }}">
+    <meta property="og:image:alt" content="{{ seo()->meta()->title() }}">
     <meta property="og:image:width" content="640">
     <meta property="og:image:height" content="480">
     <meta property="og:type" content="image/webp">
-    <link rel="canonical" href="https://zmeika.pro/{{ isset($canonicalLink) ? $canonicalLink : ''}}">
+    <link rel="canonical" href="https://zmeika.pro{{ seo()->url() }}">
     <!-- Google Tag Manager -->
     <script nonce="{{ $nonce }}">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
