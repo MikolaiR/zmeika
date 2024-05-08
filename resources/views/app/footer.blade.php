@@ -14,7 +14,7 @@
                             <a href="{{ route('news.index')}}" class="text-white">Змеиные новости</a>
                         </li>
                         <li class="row-links-soc-item mbr-fonts-style display-7">
-                            <a href="/" class="text-white">Контакты</a>
+                            <a href="{{ route('questions.index') }}" class="text-white">Вопросы</a>
                         </li>
                     </ul>
                 </div>

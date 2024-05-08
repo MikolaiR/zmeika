@@ -7,6 +7,7 @@ namespace App\Providers;
 use App\MoonShine\Resources\CategoriesResource;
 use App\MoonShine\Resources\NewSletterResource;
 use App\MoonShine\Resources\ProductsResource;
+use App\MoonShine\Resources\QuestionResource;
 use App\MoonShine\Resources\SeoTagsResource;
 use MoonShine\Providers\MoonShineApplicationServiceProvider;
 use MoonShine\Menu\MenuGroup;
@@ -48,6 +49,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
             ]),
             MenuGroup::make('СЕО',[
                 MenuItem::make('Новости', new NewSletterResource()),
+                MenuItem::make('Вопросы и ответы', new QuestionResource()),
                 MenuItem::make('СЕО параметры', new SeoTagsResource()),
             ]),
             MenuGroup::make(static fn() => __('moonshine::ui.resource.system'), [

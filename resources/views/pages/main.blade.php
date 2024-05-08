@@ -36,141 +36,16 @@
 {{--    </section>--}}
     @include('sections.products-list')
     @include('sections.latest-news')
-    <section data-bs-version="5.1" class="list1 cid-ubp1pqZyJ6" id="faq-1-ubp1pqZyJ6">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-md-12 col-lg-10 m-auto">
-                    <div class="content">
-                        <div class="row justify-content-center mb-5">
-                            <div class="col-12 content-head">
-                                <div class="mbr-section-head">
-                                    <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                                        <strong>Часто задаваемые вопросы</strong>
-                                    </h4>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div id="bootstrap-accordion_6" class="panel-group accordionStyles accordion" role="tablist"
-                             aria-multiselectable="true">
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingOne">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                       data-bs-toggle="collapse" data-core="" href="#collapse1_6" aria-expanded="false"
-                                       aria-controls="collapse1">
-                                        <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Какие
-                                            змеи у вас есть?</h6>
-                                        <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                    </a>
-                                </div>
-                                <div id="collapse1_6" class="panel-collapse noScroll collapse" role="tabpanel"
-                                     aria-labelledby="headingOne" data-parent="#accordion"
-                                     data-bs-parent="#bootstrap-accordion_6">
-                                    <div class="panel-body">
-                                        <p class="mbr-fonts-style panel-text display-7">У нас есть питоны, удавы,
-                                            королевские питоны и много других экзотических видов змей!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingOne">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                       data-bs-toggle="collapse" data-core="" href="#collapse2_6" aria-expanded="false"
-                                       aria-controls="collapse2">
-                                        <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Могу ли
-                                            я погладить змею?</h6>
-                                        <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                    </a>
-                                </div>
-                                <div id="collapse2_6" class="panel-collapse noScroll collapse" role="tabpanel"
-                                     aria-labelledby="headingOne" data-parent="#accordion"
-                                     data-bs-parent="#bootstrap-accordion_6">
-                                    <div class="panel-body">
-                                        <p class="mbr-fonts-style panel-text display-7">Конечно! Наши змеи дружелюбны и
-                                            обожают внимание. Приходите и заводите новых змеиных друзей!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingOne">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                       data-bs-toggle="collapse" data-core="" href="#collapse3_6" aria-expanded="false"
-                                       aria-controls="collapse3">
-                                        <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Как
-                                            часто нужно кормить змею?</h6>
-                                        <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                    </a>
-                                </div>
-                                <div id="collapse3_6" class="panel-collapse noScroll collapse" role="tabpanel"
-                                     aria-labelledby="headingOne" data-parent="#accordion"
-                                     data-bs-parent="#bootstrap-accordion_6">
-                                    <div class="panel-body">
-                                        <p class="mbr-fonts-style panel-text display-7">Зависит от вида, но обычно
-                                            достаточно кормить змею раз в неделю. Наши специалисты подскажут вам все
-                                            детали!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingOne">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                       data-bs-toggle="collapse" data-core="" href="#collapse4_6" aria-expanded="false"
-                                       aria-controls="collapse4">
-                                        <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Могут
-                                            ли змеи быть домашними питомцами?</h6>
-                                        <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                    </a>
-                                </div>
-                                <div id="collapse4_6" class="panel-collapse noScroll collapse" role="tabpanel"
-                                     aria-labelledby="headingOne" data-parent="#accordion"
-                                     data-bs-parent="#bootstrap-accordion_6">
-                                    <div class="panel-body">
-                                        <p class="mbr-fonts-style panel-text display-7">Конечно! Змеи - отличные
-                                            компаньоны, они тихие, красивые и не требуют много внимания. Приходите
-                                            выбирать своего нового друга!</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header" role="tab" id="headingOne">
-                                    <a role="button" class="panel-title collapsed" data-toggle="collapse"
-                                       data-bs-toggle="collapse" data-core="" href="#collapse5_6" aria-expanded="false"
-                                       aria-controls="collapse5">
-                                        <h6 class="panel-title-edit mbr-semibold mbr-fonts-style mb-0 display-5">Как
-                                            ухаживать за змеей?</h6>
-                                        <span class="sign mbr-iconfont mobi-mbri-arrow-down"></span>
-                                    </a>
-                                </div>
-                                <div id="collapse5_6" class="panel-collapse noScroll collapse" role="tabpanel"
-                                     aria-labelledby="headingOne" data-parent="#accordion"
-                                     data-bs-parent="#bootstrap-accordion_6">
-                                    <div class="panel-body">
-                                        <p class="mbr-fonts-style panel-text display-7">Ухаживать за змеей легко! Они
-                                            требуют чистого воды, света и правильной температуры. Наши эксперты помогут
-                                            вам сделать все правильно!</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
     <section data-bs-version="5.1" class="article12 cid-ubp1pqYB48" id="about-us-12-ubp1pqYB48">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-12 col-lg-10">
                     <h3 class="mbr-section-title mbr-fonts-style mb-4 mt-0 display-2">
-                        <strong>О нашем магазине</strong>
+                        <strong>О нашем сайте</strong>
                     </h3>
-                    <p class="mbr-text mbr-fonts-style display-7">Zmeika.pro - это не просто магазин, это целый мир змей
-                        и приключений!</p>
                     <p class="mbr-text mbr-fonts-style display-7">Мы предлагаем широкий выбор экзотических видов змей
                         для всех уровней опыта.</p>
-                    <p class="mbr-text mbr-fonts-style display-7">Приходите к нам и погрузитесь в удивительный мир
-                        рептилий!</p>
+                    <p class="mbr-text mbr-fonts-style display-7">Погрузитесь в удивительный мир рептилий!</p>
                 </div>
             </div>
         </div>
@@ -188,8 +63,7 @@
                                 <div class="item features-without-image col-12">
                                     <div class="item-wrapper">
 
-                                        <p class="mbr-text mbr-fonts-style display-7">Zmeika.pro - это не просто
-                                            магазин, это целый мир удивительных и загадочных созданий. Мы предлагаем вам
+                                        <p class="mbr-text mbr-fonts-style display-7">Zmeika.pro. Мы предлагаем вам
                                             окунуться в уникальную атмосферу и познакомиться с самыми экзотическими
                                             змеями.</p>
                                     </div>
@@ -197,16 +71,16 @@
                                 <div class="item features-without-image col-12">
                                     <div class="item-wrapper">
 
-                                        <p class="mbr-text mbr-fonts-style display-7">Наша команда экспертов готова
+                                        <p class="mbr-text mbr-fonts-style display-7">Мы готовы
                                             поделиться знаниями о змеях, помочь в выборе и уходе за вашим новым
-                                            питомцем. Приходите к нам и откройте для себя мир змей в новом свете!</p>
+                                            питомцем.</p>
                                     </div>
                                 </div>
                                 <div class="item features-without-image col-12">
                                     <div class="item-wrapper">
 
                                         <p class="mbr-text mbr-fonts-style display-7">Не упустите шанс стать частью
-                                            увлекательного мира змей. Посетите наш магазин и ощутите волшебство змейской
+                                            увлекательного мира змей. Ощутите волшебство змеиной
                                             жизни прямо здесь, в Минске!</p>
                                     </div>
                                 </div>
@@ -214,7 +88,7 @@
                         </div>
                         <div class="image-wrapper d-flex justify-content-center mt-3">
                             <img src="{{ asset('/images/main/photo-1596376376140-b62b9468f081.jpeg') }}"
-                                 alt="Mobirise Website Builder">
+                                 alt="Zmeika.pro">
                         </div>
                     </div>
                 </div>

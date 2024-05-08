@@ -3,6 +3,7 @@
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\MessageController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\QuestionsController;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\SiteMapController;
 use Illuminate\Support\Facades\Route;
@@ -29,8 +30,12 @@ Route::get('/news/{slug}', [NewsController::class, 'detail'])->name('news.detail
 Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
 Route::get('/catalog/{slug}', [CatalogController::class, 'detail'])->name('catalog.detail');
 
+//form message
 Route::get('/message', [MessageController::class, 'page']);
 Route::post('/message', [MessageController::class, 'message']);
+
+//question
+Route::get('/questions', [QuestionsController::class, 'index'])->name('questions.index');
 
 Route::get('/sitemap.xml', [SiteMapController::class, 'generateSitemap'])->name('sitemap');
 Route::get('/robots.txt', function () {
