@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12 col-lg-6 center mt-2 mb-3">
-                <p class="mbr-fonts-style copyright mb-0 display-7">© 2024 <a target="_blank" href="https://tutweb.by">TUTWEB.BY</a>. Все права защищены.</p>
+                <p class="mbr-fonts-style copyright mb-0 display-7">© 2024 <a target="_blank" href="https://zmeika.pro/">ZMEIKA</a>. Все права защищены.</p>
             </div>
             <div class="col-12 col-lg-6 center">
                 <div class="row-links mt-2 mb-3">

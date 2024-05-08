@@ -29,7 +29,8 @@ class Product extends Model
 
     function scopeCategoryProducts(Builder $query): Builder
     {
-        return $query->where('active', 1);
+        return $query->where('active', 1)
+            ->orderBy('name', 'asc');
     }
 
     function scopeProduct(Builder $query, $slag): Builder

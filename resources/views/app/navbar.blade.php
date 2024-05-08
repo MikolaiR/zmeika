@@ -27,9 +27,9 @@
                     <li class="nav-item">
                         <a class="nav-link link text-black display-4" href="{{ route('news.index')}}" aria-expanded="false">Новости</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="/">Контакты</a>
-                    </li>
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link link text-black display-4" href="/">Контакты</a>--}}
+{{--                    </li>--}}
                 </ul>
 
                 <div class="navbar-buttons mbr-section-btn">

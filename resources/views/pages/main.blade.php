@@ -9,7 +9,7 @@
                         <strong>Змеи в Минске</strong>
                     </h1>
                     <p class="mbr-fonts-style mbr-text mbr-white mb-4 display-7" style="font-size: 26px;text-shadow: 3px 3px 6px rgba(0,0,0,0.87);">
-                        Захватывающий мир змей прямо у вас дома! Приходите и выбирайте своего нового хищника.
+                        Захватывающий мир змей прямо у вас дома! Выбирайте своего нового питомца.
                     </p>
                     <div class="mbr-section-btn">
                         <a class="btn btn-white-outline display-7" href="{{ route('catalog.index')}} " style="text-shadow: 3px 3px 6px rgba(0,0,0,0.87);">Укусить сейчас</a>
