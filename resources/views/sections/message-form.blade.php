@@ -45,7 +45,8 @@
             </div>
             <div class="col-12 col-lg-6">
                 <div class="image-wrapper">
-                    <img class="w-100" src="{{ asset('images/main/photo-1546992772-3318f1f3a1be.webp') }}"
+                    <img class="w-100"
+                         src="{{ isset($product->image) ? Storage::url($product->image) : asset('images/main/photo-1546992772-3318f1f3a1be.webp') }}"
                          alt="Zmeika.pro">
                 </div>
             </div>
