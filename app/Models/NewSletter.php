@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Services\ContentService;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -19,6 +20,19 @@ class NewSletter extends Model
         'description',
         'active',
     ];
+
+    public static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($news) {
+            $news->image = (new ContentService())->convertImage($news->image, $news->id, true);
+        });
+
+        static::updating(function ($news) {
+            $news->image = (new ContentService())->convertImage($news->image, $news->id);
+        });
+    }
 
     public function scopeNews(Builder $query)
     {
