@@ -35,6 +35,7 @@
 {{--        </div>--}}
 {{--    </section>--}}
     @include('sections.products-list')
+    @include('pages.questions.questions')
     @include('sections.latest-news')
     <section data-bs-version="5.1" class="article12 cid-ubp1pqYB48" id="about-us-12-ubp1pqYB48">
         <div class="container">
