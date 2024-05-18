@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\NewSletter;
 use App\Models\Product;
+use App\Models\Question;
 use Illuminate\Http\Request;
 
 class ShowController extends Controller
@@ -12,6 +13,7 @@ class ShowController extends Controller
     {
         $news = NewSletter::news()->get();
         $products = Product::categoryProducts()->get();
-        return view('pages.main', ['news' => $news, 'products' => $products]);
+        $questions = Question::questionsActive()->get();
+        return view('pages.main', ['news' => $news, 'products' => $products, 'questions' => $questions]);
     }
 }

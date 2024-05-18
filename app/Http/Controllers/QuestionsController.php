@@ -11,7 +11,7 @@ class QuestionsController extends Controller
     {
         $questions = Question::questionsActive()->get();
 
-        return view('pages.questions', [
+        return view('pages.questions.index', [
             'questions' => $questions
         ]);
     }
