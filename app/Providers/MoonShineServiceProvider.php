@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Providers;
 
 use App\MoonShine\Resources\CategoriesResource;
+use App\MoonShine\Resources\ContentResource;
 use App\MoonShine\Resources\NewSletterResource;
 use App\MoonShine\Resources\ProductsResource;
 use App\MoonShine\Resources\QuestionResource;
@@ -46,6 +47,7 @@ class MoonShineServiceProvider extends MoonShineApplicationServiceProvider
             MenuGroup::make('ТОВАРЫ',[
                 MenuItem::make('Продукция', new ProductsResource()),
                 MenuItem::make('Категории', new CategoriesResource()),
+                MenuItem::make('Контент', new ContentResource()),
             ]),
             MenuGroup::make('СЕО',[
                 MenuItem::make('Новости', new NewSletterResource()),

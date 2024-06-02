@@ -23,7 +23,7 @@ class CatalogController extends Controller
         // Define the keywords for SEO purposes
         $keywords = "змеи на продажу, купить змею, экзотические змеи, ручные змеи, уход за змеями, змеи как питомцы, террариумы для змей";
         // Retrieve the products in the specific category
-        $products = Product::categoryProducts()->get();
+        $products = Product::products()->get();
         $canonicalLink = 'catalog/';
         // Return
         return view('pages.catalog.index', [

@@ -9,9 +9,9 @@ use Illuminate\Database\Eloquent\Model;
 
 use MoonShine\Decorations\Column;
 use MoonShine\Decorations\Grid;
-use MoonShine\Fields\Image;
 use MoonShine\Fields\Number;
 use MoonShine\Fields\Relationships\BelongsTo;
+use MoonShine\Fields\Relationships\MorphMany;
 use MoonShine\Fields\Slug;
 use MoonShine\Fields\Switcher;
 use MoonShine\Fields\Text;
@@ -37,6 +37,7 @@ class ProductsResource extends ModelResource
     public function fields(): array
     {
         return [
+
             Block::make([
                 Grid::make([
                     Column::make([
@@ -53,12 +54,12 @@ class ProductsResource extends ModelResource
                             ->live(),
                     ])->columnSpan(5),
                     Column::make([
-                        Image::make('image')
-                            ->disk('')
-                            ->dir('/public/images/products'),
+                        MorphMany::make('Контент', 'contents', resource: new ContentResource())
+                            ->hideOnIndex()
+                            ->creatable(),
                         Number::make('price')->sortable(),
                         BelongsTo::make('category', resource: new CategoriesResource()),
-                        Switcher::make( 'active')
+                        Switcher::make('active')
                             ->updateOnPreview(),
                     ])->columnSpan(5),
                 ]),

@@ -42,9 +42,17 @@ class Product extends Model
         return $this->belongsTo(Category::class, 'category_id');
     }
 
-    function scopeCategoryProducts(Builder $query): Builder
+    public function contents()
+    {
+        return $this->morphMany(Content::class, 'contantable');
+    }
+
+    function scopeProducts(Builder $query): Builder
     {
         return $query->where('active', 1)
+            ->with([
+                'category:id,name', 'contents'
+            ])
             ->orderBy('name', 'asc');
     }
 
@@ -52,4 +60,5 @@ class Product extends Model
     {
         return $query->where('slug', $slag);
     }
+
 }
