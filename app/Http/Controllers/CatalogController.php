@@ -37,7 +37,7 @@ class CatalogController extends Controller
             ->where('products.active', 1)
             ->groupBy('categories.id', 'categories.name')
             ->get();
-        $canonicalLink = 'catalog/';
+        $canonicalLink = '/catalog/';
         // Return
         return view('pages.catalog.index', [
             'products' => $products, 'title' => $title, 'categories' => $categories,

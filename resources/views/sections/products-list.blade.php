@@ -23,7 +23,7 @@
                             <ul class="sidebar-list">
                                 @foreach($categories as $category)
                                     <li>
-                                        <a title="{{ $category->name }}" class="link category-link" href="{{ route('catalog.index', $category->name) }}">
+                                        <a title="{{ $category->name }}" class="link category-link" href="{{ route('catalog.category', $category->name) }}">
                                             <span class="product-count">({{ $category->product_count }}) </span>{{ $category->name }}
                                         </a>
                                     </li>

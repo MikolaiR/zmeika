@@ -12,12 +12,14 @@
                         <h1>{{ seo()->meta()->title() }}</h1>
                         <ul class="breadcrumb">
                             @foreach($segments as $key => $segment)
-                                @php
-                                    $url .= '/' . $segment;
-                                @endphp
-                                <li class="{{ $loop->last ? 'current' : '' }}">
-                                    <a href="{{ $url }}">{{ $segment }}</a>
-                                </li>
+                                @if(!(count($segments) === 3 && $key === 1) )
+                                    @php
+                                        $url .= '/' . $segment;
+                                    @endphp
+                                    <li class="{{ $loop->last ? 'current' : '' }}">
+                                        <a href="{{ $url }}">{{ $segment }}</a>
+                                    </li>
+                                @endif
                             @endforeach
                         </ul>
                     </div>
