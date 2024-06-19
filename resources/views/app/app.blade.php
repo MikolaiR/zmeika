@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta http-equiv="Content-Security-Policy"
-          content="font-src 'self' data:; child-src blob: https://mc.yandex.ru; frame-src blob: https://mc.yandex.ru https://www.youtube.com; default-src 'self'; script-src-elem 'unsafe-inline' https://mc.yandex.ru https://zmeika.pro https://www.googletagmanager.com script-src 'self' 'unsafe-eval' 'nonce-{{ $nonce }}'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://mc.yandex.ru/ https://www.google-analytics.com/">
+{{--    <meta http-equiv="Content-Security-Policy"--}}
+{{--          content="font-src 'self' data:; child-src blob: https://mc.yandex.ru; frame-src blob: https://mc.yandex.ru https://www.youtube.com; default-src 'self'; script-src-elem 'unsafe-inline' https://mc.yandex.ru https://zmeika.pro https://www.googletagmanager.com script-src 'self' 'unsafe-eval' 'nonce-{{ $nonce }}'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self' https://mc.yandex.ru/ https://www.google-analytics.com/">--}}
     <meta name="yandex-verification" content=""/>
     <link rel="icon" type="image/svg+xml" sizes="any" href="{{ asset('images/logo.svg') }}">
     <meta name="author" content="https://tutweb.by"/>
@@ -60,7 +60,28 @@
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css2?family=Brygada+1918:wght@400;700&display=swap&display=swap">
     </noscript>
-    @vite('resources/css/app.css')
+    <link href="{{ url('') }}/assets/css/leaflet.min.css" rel="stylesheet" />
+    <!--== Nice Select Min CSS ==-->
+    <link href="{{ url('') }}/assets/css/nice-select.min.css" rel="stylesheet" />
+    <!--== Slick Slider Min CSS ==-->
+    <link href="{{ url('') }}/assets/css/slick.min.css" rel="stylesheet" />
+    <!--== Magnific Popup Min CSS ==-->
+    <link href="{{ url('') }}/assets/css/magnific-popup.min.css" rel="stylesheet" />
+    <!--== Slicknav Min CSS ==-->
+    <link href="{{ url('') }}/assets/css/slicknav.min.css" rel="stylesheet" />
+    <!--== Animate Min CSS ==-->
+    <link href="{{ url('') }}/assets/css/animate.min.css" rel="stylesheet" />
+    <!--== Ionicons Min CSS ==-->
+    <link href="{{ url('') }}/assets/css/ionicons.min.css" rel="stylesheet" />
+    <!--== Font-Awesome Min CSS ==-->
+    <link href="{{ url('') }}/assets/css/font-awesome.min.css" rel="stylesheet" />
+    <!--== Bootstrap Min CSS ==-->
+    <link href="{{ url('') }}/assets/css/bootstrap.min.css" rel="stylesheet" />
+    <!--== Main Style CSS ==-->
+    <link href="{{ url('') }}/assets/css/style.css" rel="stylesheet" />
+    <!--== Helper Min CSS ==-->
+    <link href="{{ url('') }}/assets/css/helper.min.css" rel="stylesheet" />
+    @yield('styles')
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -80,9 +101,37 @@
     </script>
 @endif
 @include('app.navbar')
-@yield('content')
+@include('app.header')
+<div class="mt-50">
+    @yield('content')
+</div>
 @include('app.footer')
-<script src="{{ asset('/js/jquery/jquery.min.js') }}"></script>
-@vite('resources/js/app.js')
+<!-- build:js /assets/js/app.min.js -->
+<!--=== Modernizr Min Js ===-->
+<script src="{{ asset('/assets/js/modernizr-3.6.0.min.js') }}"></script>
+<!--=== jQuery Min Js ===-->
+<script src="{{ asset('/assets/js/jquery-3.3.1.min.js') }}"></script>
+<!--=== jQuery Migration Min Js ===-->
+<script src="{{ asset('/assets/js/jquery-migrate-1.2.1.min.js') }}"></script>
+<!--=== Popper Min Js ===-->
+<script src="{{ asset('/assets/js/popper.min.js') }}"></script>
+<!--=== Bootstrap Min Js ===-->
+<script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+<!--=== Slicknav Min Js ===-->
+<script src="{{ asset('/assets/js/jquery.slicknav.min.js') }}"></script>
+<!--=== Magnific Popup Min Js ===-->
+<script src="{{ asset('/assets/js/jquery.magnific-popup.min.js') }}"></script>
+<!--=== Slick Slider Min Js ===-->
+<script src="{{ asset('/assets/js/slick.min.js') }}"></script>
+<!--=== Nice Select Min Js ===-->
+<script src="{{ asset('/assets/js/jquery.nice-select.min.js') }}"></script>
+<!--=== Leaflet Min Js ===-->
+<script src="{{ asset('/assets/js/leaflet.min.js') }}"></script>
+<!--=== Countdown Js ===-->
+<script src="{{ asset('/assets/js/countdown.js') }}"></script>
+<!--=== Active Js ===-->
+<script src="{{ asset('/assets/js/active.js') }}"></script>
+<!-- endbuild -->
+@yield('scripts')
 </body>
 </html>

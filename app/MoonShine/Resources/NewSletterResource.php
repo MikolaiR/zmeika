@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\NewSletter;
 
 use MoonShine\Fields\Image;
+use MoonShine\Fields\Relationships\MorphMany;
 use MoonShine\Fields\Slug;
 use MoonShine\Fields\Switcher;
 use MoonShine\Fields\Text;
@@ -45,13 +46,13 @@ class NewSletterResource extends ModelResource
                     ->separator('-')
                     ->unique()
                     ->live(),
-                Image::make('image')
-                    ->disk('')
-                    ->dir('/public/images/news'),
                 TinyMce::make('description')
                     ->hideOnIndex(),
                 Switcher::make( 'active')
                     ->updateOnPreview(),
+                MorphMany::make('Контент', 'contents', resource: new ContentResource())
+                    ->hideOnIndex()
+                    ->creatable(),
             ]),
         ];
     }

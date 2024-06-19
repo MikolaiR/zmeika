@@ -106,7 +106,7 @@ public function processContent(Content $content, bool $created = false)
             }
             if ($content->is_preview == MediaPreview::PREVIEW) {
                 if ($index == 0) {
-                    $content->url_preview = $this->convertImage($url, $content->contantable_id, $created, 450);
+                    $content->url_preview = $this->convertImage($url, $content->contantable_id, $created, 300);
                 }
             }
         }
@@ -116,7 +116,7 @@ public function processContent(Content $content, bool $created = false)
             $content->url = $this->convertImage($content->url, $content->contantable_id, $created);
         }
         if ($content->is_preview == MediaPreview::PREVIEW) {
-            $content->url_preview = $this->convertImage($content->url, $content->contantable_id, $created, 450);
+            $content->url_preview = $this->convertImage($content->url, $content->contantable_id, $created, 300);
         }
     }
 }

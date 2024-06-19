@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 // home
-Route::get('/', [ShowController::class, 'show'])->name('main.show');
+Route::get('/', [ShowController::class, 'home'])->name('home');
 
 // news
 Route::get('/news', [NewsController::class, 'index'])->name('news.index');
@@ -33,6 +33,8 @@ Route::get('/catalog/{slug}', [CatalogController::class, 'detail'])->name('catal
 //form message
 Route::get('/message', [MessageController::class, 'page']);
 Route::post('/message', [MessageController::class, 'message']);
+
+Route::get('/contacts', [ShowController::class, 'contacts'])->name('contacts');
 
 //question
 Route::get('/questions', [QuestionsController::class, 'index'])->name('questions.index');

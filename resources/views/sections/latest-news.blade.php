@@ -1,35 +1,215 @@
-<section data-bs-version="5.1" class="features03 cid-ubp1pqYw5h" id="news-1-ubp1pqYw5h">
-    <div class="container-fluid">
-        <div class="row justify-content-center mb-5">
-            <div class="col-12 content-head">
-                <div class="mbr-section-head">
-                    <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
-                        <strong>Удивительные новости</strong>
-                    </h4>
-
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            @foreach($news as $new)
-                <div class="item features-image col-12 col-md-6 col-lg-3 active">
-                    <div class="item-wrapper">
-                        <div class="item-img mb-3">
-                            <img src="{{ Storage::url($new->image) }}" alt="{{ $new->title }}" title="{{ $new->title }}">
-                        </div>
-                        <div class="item-content align-left">
-                            <h5 class="item-title mbr-fonts-style mt-0 mb-2 display-5">
-                                <strong>{{ $new->title }}</strong>
-                            </h5>
-                            <p class="mbr-text mbr-fonts-style mb-3 display-7">{{ $new->updated_at }}</p>
-                            <p class="mbr-text mbr-fonts-style mb-3 display-7">{!! Str::limit($new->description, 100, '...') !!}</p>
-                            <div class="mbr-section-btn item-footer">
-                                <a href="{{ route('news.detail', ['slug' => $new->slug])}}" class="btn item-btn btn-primary display-7">Ура!</a>
+<!--== Start Page Content Wrapper ==-->
+<div class="page-content-wrapper sp-y">
+    <div class="blog-page-content-wrap">
+        <div class="container container-wide">
+            <div class="row">
+                <div class="col-md-6 col-xl-4">
+                    <div class="blog-item">
+                        <figure class="blog-item__thumb">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-1.jpg" alt="Blog"/></a>
+                        </figure>
+                        <div class="blog-item__info">
+                            <div class="post-date">
+                                <span>01</span>
+                                <span>Jun</span>
                             </div>
+                            <div class="post-meta">
+                                <span class="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
+                                <span class="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                            </div>
+                            <h2 class="post-title"><a href="blog-details.html">GM is About to Surprise with</a></h2>
+                            <p class="post-excerpt">There are simple hand-held tire-pressure gauges which can be
+                                temporarily attached to</p>
                         </div>
                     </div>
                 </div>
-            @endforeach
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="blog-item">
+                        <figure class="blog-item__thumb">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-2.jpg" alt="Blog"/></a>
+                        </figure>
+
+                        <div class="blog-item__info">
+                            <div class="post-date">
+                                <span>28</span>
+                                <span>May</span>
+                            </div>
+                            <div class="post-meta">
+                                <span class="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
+                                <span class="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                            </div>
+                            <h2 class="post-title"><a href="blog-details.html">Common Engine Oil Problems</a></h2>
+                            <p class="post-excerpt">Under-inflation of tires can cause premature and uneven tire wear,
+                                excess fuel</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="blog-item">
+                        <figure class="blog-item__thumb">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-3.jpg" alt="Blog"/></a>
+                        </figure>
+
+                        <div class="blog-item__info">
+                            <div class="post-date">
+                                <span>31</span>
+                                <span>May</span>
+                            </div>
+                            <div class="post-meta">
+                                <span class="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
+                                <span class="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                            </div>
+                            <h2 class="post-title"><a href="blog-details.html">Modern technology for making</a></h2>
+                            <p class="post-excerpt">There are simple hand-held tire-pressure gauges which can be
+                                temporarily attached to</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="blog-item">
+                        <figure class="blog-item__thumb">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-4.jpg" alt="Blog"/></a>
+                        </figure>
+
+                        <div class="blog-item__info">
+                            <div class="post-date">
+                                <span>31</span>
+                                <span>May</span>
+                            </div>
+                            <div class="post-meta">
+                                <span class="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
+                                <span class="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                            </div>
+                            <h2 class="post-title"><a href="blog-details.html">Electric Car Services And Their</a></h2>
+                            <p class="post-excerpt">There are simple hand-held tire-pressure gauges which can be
+                                temporarily attached to</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="blog-item">
+                        <figure class="blog-item__thumb">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-5.jpg" alt="Blog"/></a>
+                        </figure>
+
+                        <div class="blog-item__info">
+                            <div class="post-date">
+                                <span>31</span>
+                                <span>May</span>
+                            </div>
+                            <div class="post-meta">
+                                <span class="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
+                                <span class="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                            </div>
+                            <h2 class="post-title"><a href="blog-details.html">Common Engine Oil Problems</a></h2>
+                            <p class="post-excerpt">There are simple hand-held tire-pressure gauges which can be
+                                temporarily attached to</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="blog-item">
+                        <figure class="blog-item__thumb">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-6.jpg" alt="Blog"/></a>
+                        </figure>
+
+                        <div class="blog-item__info">
+                            <div class="post-date">
+                                <span>31</span>
+                                <span>May</span>
+                            </div>
+                            <div class="post-meta">
+                                <span class="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
+                                <span class="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                            </div>
+                            <h2 class="post-title"><a href="blog-details.html">Can Brake Fluid Go Bad?</a></h2>
+                            <p class="post-excerpt">There are simple hand-held tire-pressure gauges which can be
+                                temporarily attached to</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="blog-item">
+                        <figure class="blog-item__thumb">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-7.jpg" alt="Blog"/></a>
+                        </figure>
+
+                        <div class="blog-item__info">
+                            <div class="post-date">
+                                <span>31</span>
+                                <span>May</span>
+                            </div>
+                            <div class="post-meta">
+                                <span class="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
+                                <span class="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                            </div>
+                            <h2 class="post-title"><a href="blog-details.html">Ready for track day</a></h2>
+                            <p class="post-excerpt">There are simple hand-held tire-pressure gauges which can be
+                                temporarily attached to</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="blog-item">
+                        <figure class="blog-item__thumb">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-8.jpg" alt="Blog"/></a>
+                        </figure>
+
+                        <div class="blog-item__info">
+                            <div class="post-date">
+                                <span>31</span>
+                                <span>May</span>
+                            </div>
+                            <div class="post-meta">
+                                <span class="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
+                                <span class="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                            </div>
+                            <h2 class="post-title"><a href="blog-details.html">How to make your tires last 8+</a></h2>
+                            <p class="post-excerpt">There are simple hand-held tire-pressure gauges which can be
+                                temporarily attached to</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4">
+                    <div class="blog-item">
+                        <figure class="blog-item__thumb">
+                            <a href="blog-details.html"><img src="assets/img/blog/blog-9.jpg" alt="Blog"/></a>
+                        </figure>
+
+                        <div class="blog-item__info">
+                            <div class="post-date">
+                                <span>31</span>
+                                <span>May</span>
+                            </div>
+                            <div class="post-meta">
+                                <span class="author">Author: <a href="blog-details.html" rel="author">Lukas</a></span>
+                                <span class="comment">Comments: <a href="blog-details.html" rel="author">3</a></span>
+                            </div>
+                            <h2 class="post-title"><a href="blog-details.html">When do I Change My Rotors?</a></h2>
+                            <p class="post-excerpt">There are simple hand-held tire-pressure gauges which can be
+                                temporarily attached to</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <nav class="pagination-wrap mt-70 mt-md-50 mt-sm-35">
+            <ul class="pagination pagination--2 justify-content-center">
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#"><i class="ion-chevron-right"></i></a></li>
+            </ul>
+        </nav>
     </div>
-</section>
+</div>
+
+<!--== End Page Content Wrapper ==-->

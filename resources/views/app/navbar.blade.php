@@ -1,41 +1,30 @@
-<section data-bs-version="5.1" class="menu menu2 cid-ubp1pqWtlZ" once="menu" id="menu-5-ubp1pqWtlZ">
-    <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
-        <div class="container">
-            <div class="navbar-brand">
-				<span class="navbar-logo">
-					<a href="/">
-						<img src="{{ asset('images/logo.svg') }}" alt="ZMEIKA">
-					</a>
-				</span>
-{{--                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="/">ZMEIKA</a></span>--}}
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
-                    data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+<header class="header-area">
+    <div class="container container-wide">
+        <div class="row align-items-center">
+            <div class="col-sm-4 col-lg-2">
+                <div class="site-logo text-center text-sm-left">
+                    <a href="/"><img src="{{ url('') }}/images/logo.png" alt="Logo" /></a>
                 </div>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
-                    <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="{{ route('catalog.index')}}">Каталог змей</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="{{ route('news.index')}}" aria-expanded="false">Новости</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link link text-black display-4" href="{{ route('questions.index')}}">Вопросы</a>
-                    </li>
-                </ul>
+            </div>
 
-                <div class="navbar-buttons mbr-section-btn">
-                    <a class="btn btn-primary display-4" href="/message">Покупайте змей</a>
+            <div class="col-lg-7 d-none d-lg-block">
+                <div class="site-navigation">
+                    <ul class="main-menu nav">
+                        <li>
+                            <a href="{{ route('home') }}">Главная</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('catalog.index') }}">Каталог</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('news.index') }}">Новости</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('contacts') }}">Контакты</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </nav>
-</section>
+    </div>
+</header>

@@ -6,14 +6,20 @@ use App\Models\NewSletter;
 use App\Models\Product;
 use App\Models\Question;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
+
 
 class ShowController extends Controller
 {
-    public function show()
+    public function home(): View
     {
-        $news = NewSletter::news()->get();
-        $products = Product::products()->get();
+        $products = Product::products()->inRandomOrder()->get();
         $questions = Question::questionsActive()->get();
-        return view('pages.main', ['news' => $news, 'products' => $products, 'questions' => $questions]);
+        return view('pages.home', compact('products'));
+    }
+
+    public function contacts(): View
+    {
+        return view('pages.contacts');
     }
 }

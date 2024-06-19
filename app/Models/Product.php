@@ -24,19 +24,6 @@ class Product extends Model
         'active',
     ];
 
-    public static function boot()
-    {
-        parent::boot();
-
-        static::creating(function ($product) {
-            $product->image = (new ContentService())->convertImage($product->image, $product->id, true);
-        });
-
-        static::updating(function ($product) {
-            $product->image = (new ContentService())->convertImage($product->image, $product->id);
-        });
-    }
-
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class, 'category_id');
@@ -47,12 +34,16 @@ class Product extends Model
         return $this->morphMany(Content::class, 'contantable');
     }
 
+    public function getFirstPreviewImage()
+    {
+        return $this->contents()->where('is_preview', 1)->first();
+    }
     function scopeProducts(Builder $query): Builder
     {
-        return $query->where('active', 1)
-            ->with([
-                'category:id,name', 'contents'
-            ])
+        return $query->with([
+            'category:id,name', 'contents'
+        ])
+            ->where('active', 1)
             ->orderBy('name', 'asc');
     }
 

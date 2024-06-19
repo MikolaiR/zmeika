@@ -21,17 +21,9 @@ class NewSletter extends Model
         'active',
     ];
 
-    public static function boot()
+    public function contents()
     {
-        parent::boot();
-
-        static::creating(function ($news) {
-            $news->image = (new ContentService())->convertImage($news->image, $news->id, true);
-        });
-
-        static::updating(function ($news) {
-            $news->image = (new ContentService())->convertImage($news->image, $news->id);
-        });
+        return $this->morphMany(Content::class, 'contantable');
     }
 
     public function scopeNews(Builder $query)
