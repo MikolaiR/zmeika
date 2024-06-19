@@ -27,6 +27,7 @@ class MessageController extends Controller
         if (isset($request->phone)) $text .= ' phone: ' . $request->message;
         if (isset($request->textarea)) $text .= ' message: ' . $request->textarea;
         if (isset($request->product)) $text .= ' product: ' . $request->product;
+        if (isset($request->product_id)) $text .= ' product_id: ' . $request->product_id;
 
         if (TelegramService::sendMessage($text)) {
             // success

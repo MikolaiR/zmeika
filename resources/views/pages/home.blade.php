@@ -111,10 +111,13 @@
                                         <a href="{{ route('catalog.detail', $product->slug) }}">
                                             @php
                                                 $previewImage = $product->getFirstPreviewImage();
+                                                $linkImage = $previewImage ? $previewImage->url_preview :
+                                               (isset($product->contents[0]->url) ? $product->contents[0]->url :
+                                                'public/images/contents/no-image.webp');
                                             @endphp
-                                            <img class="thumb-primary" style="height: 15rem"
-                                                 src="{{ Storage::url($previewImage ? $previewImage->url_preview : (isset($product->contents[0]->url) ? $product->contents[0]->url : 'public/images/contents/no-image.webp')) }}"
-                                                 alt="{{ $product->name }}"/>
+                                            <img class="thumb-primary h-75" src="{{ Storage::url($linkImage) }}" alt="{{ $product->name }}"/>
+                                            <img class="thumb-secondary" src="{{
+    Storage::url($product->contents[1]->url ?? 'public/images/contents/no-image.webp') }}" alt="{{ $product->name }}" />
                                         </a>
                                     </div>
                                     <div class="product-item__content mt-15">

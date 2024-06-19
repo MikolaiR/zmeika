@@ -5,10 +5,12 @@
             <a class="h-75" href="{{ route('catalog.detail', ['slug' => $product->slug]) }} ">
                 @php
                     $previewImage = $product->getFirstPreviewImage();
-                @endphp
-                <img class="thumb-primary h-75" src="{{ Storage::url($previewImage ? $previewImage->url_preview :
+                    $linkImage = $previewImage ? $previewImage->url_preview :
                    (isset($product->contents[0]->url) ? $product->contents[0]->url :
-                    'public/images/contents/no-image.webp')) }}" alt="{{ $product->name }}"/>
+                    'public/images/contents/no-image.webp');
+                @endphp
+                <img class="thumb-primary h-75" src="{{ Storage::url($linkImage) }}" alt="{{ $product->name }}"/>
+                <img class="thumb-secondary" src="{{ Storage::url($linkImage) }}" alt="{{ $product->name }}" />
             </a>
             <div class="ratting">
                 <span><i class="ion-android-star"></i></span>

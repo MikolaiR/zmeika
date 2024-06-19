@@ -4530,3 +4530,46 @@ Start Comment Area Wrapper
     flex-shrink: 0;
     margin-right: 10px; /* Отступ между названием и количеством */
 }
+
+.mh-px-500 {
+    max-height: 450px;
+}
+
+.kpx_btn-facebook {background: #3b5998; -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;}
+.kpx_btn-facebook:hover {background: #172d5e}
+.kpx_btn-facebook:focus {background: #fff; color:#3b5998; border-color: #3b5998;}
+
+@media (min-width: 768px) {
+    .kpx_row-sm-offset-3 div:first-child[class*="col-"] {
+        margin-left: 25%;
+    }
+}
+
+.kpx_btn-vk {background: #45668e; -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;}
+.kpx_btn-vk:hover {background: #1a3352}
+.kpx_btn-vk:focus {background: #fff; color: #45668e; border-color: #45668e}
+
+.kpx_btn-google-plus {background: #c32f10; -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;}
+.kpx_btn-google-plus:hover {background: #6b1301}
+.kpx_btn-google-plus:focus {background: #fff; color: #c32f10; border-color: #c32f10}
+.fa-facebook {
+    color: white;
+}
+.fa-vk {
+    color: white;
+}
+.fa-google-plus {
+    color: white;
+}
+.fa-google-plus {
+    color: white;
+}

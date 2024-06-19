@@ -36,7 +36,6 @@
                             <ul class="widget-list">
                                 <li><a href="{{ route('home') }}">Главная</a></li>
                                 <li><a href="{{ route('catalog.index') }}">Каталог</a></li>
-                                <li><a href="{{ route('news.index') }}">Новости</a></li>
                                 <li><a href="{{ route('contacts') }}">Контакты</a></li>
                             </ul>
                         </div>
