@@ -4516,3 +4516,17 @@ Start Comment Area Wrapper
 .single-comment-wrap .comment-footer a.btn-reply:hover {
     color: #eeb644;
 }
+
+.category-link {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-count {
+    flex-shrink: 0;
+    margin-right: 10px; /* Отступ между названием и количеством */
+}

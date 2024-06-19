@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Product;
 use App\Services\SeoService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 
 class CatalogController extends Controller
@@ -14,7 +16,7 @@ class CatalogController extends Controller
      *
      * @return \Illuminate\Contracts\View\View
      */
-    public function index()
+    public function index($category = null)
     {
         // Define the title for the catalog page
         $title = 'КАТАЛОГ | КУПИТЬ ЗМЕЮ';
@@ -23,11 +25,22 @@ class CatalogController extends Controller
         // Define the keywords for SEO purposes
         $keywords = "змеи на продажу, купить змею, экзотические змеи, ручные змеи, уход за змеями, змеи как питомцы, террариумы для змей";
         // Retrieve the products in the specific category
-        $products = Product::products()->get();
+        $products = Product::products();
+        if($category){
+            //from show beautiful links
+            $categoryId = Category::where('name','like', "%$category%")->value('id');
+            $products = $products->where('category_id', $categoryId);
+        }
+        $products = $products->paginate(12);
+        $categories = Category::select('categories.id', 'categories.name', DB::raw('COUNT(products.id) as product_count'))
+            ->join('products', 'products.category_id', '=', 'categories.id')
+            ->where('products.active', 1)
+            ->groupBy('categories.id', 'categories.name')
+            ->get();
         $canonicalLink = 'catalog/';
         // Return
         return view('pages.catalog.index', [
-            'products' => $products, 'title' => $title,
+            'products' => $products, 'title' => $title, 'categories' => $categories,
             'canonicalLink' => $canonicalLink, 'description' => $description, 'keywords' => $keywords]);
     }
 

@@ -27,7 +27,7 @@ Route::get('/news', [NewsController::class, 'index'])->name('news.index');
 Route::get('/news/{slug}', [NewsController::class, 'detail'])->name('news.detail');
 
 // catalog
-Route::get('/catalog', [CatalogController::class, 'index'])->name('catalog.index');
+Route::get('/snakes-catalog/{category?}', [CatalogController::class, 'index'])->name('catalog.index');
 Route::get('/catalog/{slug}', [CatalogController::class, 'detail'])->name('catalog.detail');
 
 //form message
