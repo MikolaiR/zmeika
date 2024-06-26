@@ -9,9 +9,9 @@ class SiteMapController extends Controller
 {
     public function generateSitemap()
     {
-        $products = Product::categoryProducts()->orderBy('updated_at', 'desc')->get();
+        $products = Product::products()->orderBy('updated_at', 'desc')->get();
         $news = NewSletter::news()->orderBy('updated_at', 'desc')->get();
-        $lastUpdateProduct = Product::categoryProducts()->latest('updated_at')->first();
+        $lastUpdateProduct = Product::products()->latest('updated_at')->first();
         $lastUpdateNews = NewSletter::news()->latest('updated_at')->first();
         return response()->view('sitemap', [
             'products' => $products,
