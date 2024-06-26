@@ -4555,21 +4555,33 @@ Start Comment Area Wrapper
 .kpx_btn-vk:hover {background: #1a3352}
 .kpx_btn-vk:focus {background: #fff; color: #45668e; border-color: #45668e}
 
-.kpx_btn-google-plus {background: #c32f10; -webkit-transition: all 0.5s ease-in-out;
+.kpx_btn-instagram {
+    background: #833ab4;
+    background: linear-gradient(
+        to right,
+        #fcb045,#fd1d1d,#833ab4
+    );
+    -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;}
-.kpx_btn-google-plus:hover {background: #6b1301}
-.kpx_btn-google-plus:focus {background: #fff; color: #c32f10; border-color: #c32f10}
+.kpx_btn-instagram:hover {
+    background: linear-gradient(
+        to right,
+        #833ab4,#fd1d1d,#fcb045
+    );
+}
+.kpx_btn-instagram:focus {
+    background: #fff;
+    color: #833ab4;
+    border-color: #c32f10
+}
 .fa-facebook {
     color: white;
 }
 .fa-vk {
     color: white;
 }
-.fa-google-plus {
-    color: white;
-}
-.fa-google-plus {
+.fa-instagram {
     color: white;
 }

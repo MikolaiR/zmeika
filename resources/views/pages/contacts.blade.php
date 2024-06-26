@@ -18,7 +18,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-sm-6 col-lg-4">
                             <div class="contact-info-item">
                                 <div class="con-info-icon">
@@ -28,19 +27,19 @@
                                     <h4>Свяжитесь с нами в любое время</h4>
                                     <div class="row justify-content-around align-content-center">
                                         <div>
-                                            <a href="https://www.facebook.com/profile.php?id=61552662807474&locale=ru_RU" class="btn btn-lg btn-block kpx_btn-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
+                                            <a href="https://www.facebook.com/profile.php?id=61552662807474&locale=ru_RU" target="_blank" class="btn btn-lg btn-block kpx_btn-facebook" data-toggle="tooltip" data-placement="top" title="Facebook">
                                                 <i class="pt-1 fa fa-facebook fa-2x"></i>
                                                 <span class="hidden-xs"></span>
                                             </a>
                                         </div>
                                         <div>
-                                            <a href="#" class="btn btn-lg btn-block kpx_btn-vk" data-toggle="tooltip" data-placement="top" title="vk">
+                                            <a href="#" class="btn btn-lg btn-block kpx_btn-vk" target="_blank" data-toggle="tooltip" data-placement="top" title="vk">
                                                 <i class="fa fa-vk fa-2x"></i>
                                                 <span class="hidden-xs"></span>
                                             </a>
                                         </div>
                                         <div>
-                                            <a href="https://www.instagram.com/vladimirsnake23/" class="btn btn-lg btn-block kpx_btn-google-plus" data-toggle="tooltip" data-placement="top" title="instagram">
+                                            <a href="https://www.instagram.com/vladimirsnake23/" target="_blank" class="btn btn-lg btn-block kpx_btn-instagram" data-toggle="tooltip" data-placement="top" title="instagram">
                                                 <i class="fa fa-instagram fa-2x"></i>
                                                 <span class="hidden-xs"></span>
                                             </a>
@@ -58,7 +57,8 @@
                                 <div class="con-info-txt">
                                     <h4>Напишите мне</h4>
                                     <p>Поддержка 24/7
-                                        kreminskiy2024@yandex.by</p>
+                                        kreminskiy2024@yandex.by
+                                    </p>
                                 </div>
                             </div>
                         </div>
