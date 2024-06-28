@@ -1976,6 +1976,7 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
     -o-transition: 0.4s;
     transition: 0.4s;
     margin-top: 30px;
+    padding-top: 20px;
 }
 
 .product-item__thumb {
@@ -4535,6 +4536,10 @@ Start Comment Area Wrapper
     max-height: 450px;
 }
 
+.mh-px-200 {
+    max-height: 200px;
+}
+
 .kpx_btn-facebook {background: #3b5998; -webkit-transition: all 0.5s ease-in-out;
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
@@ -4584,4 +4589,20 @@ Start Comment Area Wrapper
 }
 .fa-instagram {
     color: white;
+}
+
+.color-white {
+    color: #fff;
+}
+
+.color-white:hover {
+    color: #000000;
+}
+
+.color-yellow {
+    color: #eeb644;
+}
+
+.color-yellow:hover {
+    color: #eca50c;
 }

@@ -115,8 +115,8 @@
                                                (isset($product->contents[0]->url) ? $product->contents[0]->url :
                                                 'public/images/contents/no-image.webp');
                                             @endphp
-                                            <img class="thumb-primary h-75" src="{{ Storage::url($linkImage) }}" alt="{{ $product->name }}"/>
-                                            <img class="thumb-secondary" src="{{
+                                            <img class="thumb-primary mh-px-200" src="{{ Storage::url($linkImage) }}" alt="{{ $product->name }}"/>
+                                            <img class="thumb-secondary mh-px-200" src="{{
     Storage::url($product->contents[1]->url ?? 'public/images/contents/no-image.webp') }}" alt="{{ $product->name }}" />
                                         </a>
                                     </div>
